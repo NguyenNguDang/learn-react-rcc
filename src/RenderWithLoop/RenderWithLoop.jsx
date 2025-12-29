@@ -13,11 +13,25 @@ export default class RenderWithLoop extends Component {
     ]
 
     renderTable = () => {
-        let tableBody = [];
+        //Render with loop
+        // let contentTable = [];
+        // for(let i=0; i < this.productList.length; i++){
+        //     let product = this.productList[i];
+        //     let row = <tr key={product.id}>
+        //         <td>{product.id}</td>
+        //         <td>{product.name}</td>
+        //         <td>{product.price}</td>
+        //         <td>
+        //             <img style={{ width: '100px' }} src={product.img} alt="" />
+        //         </td>
+        //         <td><button className='btn btn-primary'>Buy now</button></td>
+        //     </tr>
+        //     contentTable.push(row);
+        // }
 
-        for(let i=0; i < this.productList.length; i++){
-            let product = this.productList[i];
-            let row = <tr key={product.id}>
+        //Render with map
+        let contentTable = this.productList.map((product, index) => {
+            return <tr key={index}>
                 <td>{product.id}</td>
                 <td>{product.name}</td>
                 <td>{product.price}</td>
@@ -26,9 +40,9 @@ export default class RenderWithLoop extends Component {
                 </td>
                 <td><button className='btn btn-primary'>Buy now</button></td>
             </tr>
-            tableBody.push(row);
-        }
-        return tableBody;
+        });
+
+        return contentTable;
     }
   render() {
     return (

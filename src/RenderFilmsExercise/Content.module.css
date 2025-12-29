@@ -1,0 +1,32 @@
+.img{
+    with: 200px;
+    height: 300px;
+}
+
+.title{
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.description{
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.bgContent {
+    background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://image.tmdb.org/t/p/original/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg");
+    
+    background-size: cover;  /* Ảnh phủ kín khung */
+    background-position: center; /* Ảnh căn giữa */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    background-attachment: fixed; /* (Tùy chọn) Hiệu ứng Parallax khi cuộn */
+    
+    padding: 50px 0; 
+    min-height: 100vh; 
+
+    color: white; 
+}
