@@ -1,5 +1,6 @@
 import './App.css'
 import Home from './components/Home'
+import DemoProps from './Props/DemoProps'
 import RenderFilmsExercise from './RenderFilmsExercise/RenderFilmsExercise'
 import RenderWithLoop from './RenderWithLoop/RenderWithLoop'
 import SelectCar from './SelectCarExercise/SelectCar'
@@ -14,7 +15,8 @@ function App() {
       {/* <Styling/> */}
       {/* <RenderWithLoop/> */}
       {/* <RenderFilmsExercise/> */}
-      <SelectGlassesEX/> 
+      {/* <SelectGlassesEX/>  */}
+      <DemoProps/> 
     </>
   )
 }

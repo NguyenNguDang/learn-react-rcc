@@ -28,6 +28,16 @@ export default class SelectGlassesEX extends Component {
   };
 
   render() {
+
+   const keyFrames =  `@keyframes animChangeGlasses${Date.now()} {
+                from {
+                  width: 0;
+                }
+                to {
+                  width: 150px;
+                }
+              }`;
+
     const container = {
       backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./glassesImage/background.jpg)",
       minHeight: "100vh", 
@@ -70,7 +80,8 @@ export default class SelectGlassesEX extends Component {
         left: '50%', 
         transform: 'translateX(-50%)', 
         opacity: 0.8,
-        zIndex: 10
+        zIndex: 10,
+        animation: `animChangeGlasses${Date.now()} 1s`
     }
 
     const infoStyle = {
@@ -86,6 +97,7 @@ export default class SelectGlassesEX extends Component {
 
     return (
       <div style={container}>
+        <style>{keyFrames}</style>
         <div style={header}>
           <p style={title}>TRY GLASSES APP ONLINE</p>
         </div>
@@ -96,7 +108,7 @@ export default class SelectGlassesEX extends Component {
                 <div style={modelContainer}>
                     <img style={modelImgStyle} src="./glassesImage/model.jpg" alt="Model" />
                     
-                    <img style={glassesOnFaceStyle} src={this.state.glassesItem.url} alt="Glasses" />
+                    <img  style={glassesOnFaceStyle} src={this.state.glassesItem.url} alt="Glasses" />
                     
                     <div style={infoStyle}>
                         <h5 style={{color: 'purple'}}>{this.state.glassesItem.name}</h5>
